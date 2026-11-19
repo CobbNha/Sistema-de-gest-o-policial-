@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+:root { --navy: #10233f; --paper: #f4f7fb; --line: #dce4ee; --text: #17233a; }
+body { margin: 0; color: var(--text); background: var(--paper); font-family: Arial, Helvetica, sans-serif; }
+main { min-height: 100vh; display: grid; grid-template-columns: 260px 1fr; }
+.sidebar { background: var(--navy); color: white; padding: 24px 16px; }
+.brand { display: grid; gap: 4px; margin: 4px 12px 32px; }
+.brand strong { font-size: 28px; letter-spacing: 2px; }
+.brand span { opacity: .72; font-size: 13px; }
+nav { display: grid; gap: 6px; }
+nav a { color: #d8e3ef; text-decoration: none; padding: 12px; border-radius: 8px; }
+nav a.active, nav a:hover { background: rgba(255,255,255,.1); color: white; }
+.content { padding: 32px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+header p { margin: 0 0 4px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; font-size: 12px; }
+header h1 { margin: 0; }
+.badge { background: #fff3cd; color: #7a5b00; border: 1px solid #ead48a; border-radius: 999px; padding: 8px 12px; font-weight: bold; }
+.notice { border-left: 4px solid #d8a000; background: #fffaf0; padding: 14px 16px; margin-bottom: 20px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.cards article, .progress { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+.cards p { color: #64748b; margin: 0 0 12px; }
+.cards strong { display: block; font-size: 34px; margin-bottom: 8px; }
+.cards span { color: #64748b; font-size: 13px; }
+.progress { margin-top: 16px; }
+.progress h2 { margin-top: 0; }
+.progress ul { list-style: none; padding: 0; margin: 0; }
+.progress li { display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding: 14px 0; }
+.progress b { color: #16835b; } .progress li:nth-child(n+2) b { color: #9a6700; }
+@media (max-width: 760px) { main { grid-template-columns: 1fr; } nav { grid-template-columns: repeat(2, 1fr); } .content { padding: 20px 16px; } .cards { grid-template-columns: 1fr; } }
